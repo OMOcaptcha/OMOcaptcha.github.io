@@ -6,7 +6,7 @@ START_IP = "192.168.1.1"
 END_IP   = "192.168.255.255"
 PORT = 445
 TIMEOUT = 0.5
-THREADS = 300
+THREADS = 3000
 
 queue = Queue()
 lock = threading.Lock()
@@ -37,6 +37,8 @@ def scan():
                     print(f"\n[OPEN] {ip}:{PORT}")
                     with open("open_host.txt", "a") as f:
                         f.write(f"{ip}:{PORT}\n")
+                    with open("open_host.txt", "a") as f:
+                        f.write(f"\\\\{ip}\n")
             s.close()
         except:
             pass
