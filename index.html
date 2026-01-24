@@ -3,39 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Notice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --card: #151923;
+            --text: #e6e6eb;
+            --muted: #a0a3b1;
+            --accent: #4f8cff;
+            --border: #24283a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f1115, #0b0d12);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px 36px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .meta {
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        p {
+            line-height: 1.65;
+            margin: 0 0 18px;
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <p><strong>Notice</strong><br>
-    As of <strong>24/1/2026</strong>, the file hosting service at
-    <strong>https://love.wvxx.dpdns.org/</strong> is entering end of life.</p>
+    <div class="card">
+        <h1>Notice</h1>
+        <div class="meta">
+            As of <strong>20/1/2026</strong>, the file hosting service at
+            <a href="https://love.wvxx.dpdns.org/">https://love.wvxx.dpdns.org/</a>
+            is entering end of life.
+        </div>
 
-    <p>
-    Due to ongoing abuse, spam, and repeated malicious activity, it has become no longer feasible
-    to continue operating the service for the small number of legitimate users. Multiple parties
-    have persistently attacked and misused the platform, making proper moderation and monitoring
-    impractical.
-    </p>
+        <p>
+            Due to ongoing abuse, spam, and repeated malicious activity, it has become no longer
+            feasible to continue operating the service for the small number of legitimate users.
+            Multiple parties have persistently attacked and misused the platform, making proper
+            moderation and monitoring impractical.
+        </p>
 
-    <p>
-    Effective immediately, new file uploads and file creation will be disabled. This decision was
-    not made lightly, but is necessary to prevent further abuse and to protect the server
-    infrastructure.
-    </p>
+        <p>
+            Effective immediately, new file uploads and file creation will be disabled. This
+            decision was not made lightly, but is necessary to prevent further abuse and to protect
+            the server infrastructure.
+        </p>
 
-    <p>
-    Existing files will not be impacted and will continue to function as intended for the
-    foreseeable future.
-    </p>
+        <p>
+            Existing files will not be impacted and will continue to function as intended for the
+            foreseeable future.
+        </p>
 
-    <p>
-    If there are any questions or concerns, please contact the service administrator through the
-    appropriate channel.
-    </p>
-
-    <p>
-    Thank you to everyone who used <strong>love.wvxx.dpdns.org</strong> and for the different ways
-    the service has been used over time.
-    </p>
+        <div class="footer">
+            Thank you to everyone who used love.wvxx.dpdns.org and for the different ways the service
+            has been used over time.
+        </div>
+    </div>
 </body>
 </html>
-
